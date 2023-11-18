@@ -1,0 +1,31 @@
+# Project: fila-encandeada
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/fila.o ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/main.o
+LINKOBJ  = ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/fila.o ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/main.o
+LIBS     = -L"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/lib" -L"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -pg
+INCS     = -I"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/include" -I"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/include" -I"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Users/Alunos/AppData/Local/Temp/Rar$EXa18672.44856/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = fila-encandeada.exe
+CXXFLAGS = $(CXXINCS) -pg
+CFLAGS   = $(INCS) -pg
+DEL      = C:\Users\Alunos\AppData\Local\Temp\Rar$EXa18672.44856\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/fila.o: ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/fila.cpp
+	$(CPP) -c ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/fila.cpp -o ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/fila.o $(CXXFLAGS)
+
+../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/main.o: ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/main.cpp
+	$(CPP) -c ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/main.cpp -o ../../Estrutura-de-dados/estrutura-de-dados/Fila_Encadeada/main.o $(CXXFLAGS)
